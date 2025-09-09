@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频详情页 - 哔哩哔哩</title>
+    <link rel="stylesheet" href="video-styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-left">
+                <svg class="logo" width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="goHome()">
+                    <rect width="80" height="40" rx="4" fill="#00AEEC"/>
+                    <text x="40" y="25" text-anchor="middle" fill="white" font-size="12" font-family="Arial">bilibili</text>
+                </svg>
+            </div>
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" placeholder="搜索你感兴趣的内容..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <button class="login-btn">登录</button>
+                <button class="register-btn">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <div class="video-container">
+            <!-- 视频播放区域 -->
+            <div class="video-section">
+                <div class="video-player">
+                    <svg class="video-main-placeholder" width="100%" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="450" fill="#E5E5E5"/>
+                        <circle cx="400" cy="225" r="40" fill="#999" opacity="0.6"/>
+                        <polygon points="380,200 380,250 430,225" fill="white"/>
+                    </svg>
+                </div>
+                
+                <!-- 视频信息 -->
+                <div class="video-header">
+                    <h1 class="video-title" id="videoTitle">【技术分享】前端开发实战教程 - React从入门到精通</h1>
+                    <div class="video-stats">
+                        <span class="view-count">12.5万播放</span>
+                        <span class="upload-time">2024-03-15 发布</span>
+                    </div>
+                </div>
+
+                <!-- 视频操作栏 -->
+                <div class="video-actions">
+                    <div class="action-left">
+                        <button class="action-btn like-btn">
+                            <span class="icon">👍</span>
+                            <span class="text">点赞 2.1万</span>
+                        </button>
+                        <button class="action-btn coin-btn">
+                            <span class="icon">🪙</span>
+                            <span class="text">投币 3456</span>
+                        </button>
+                        <button class="action-btn favorite-btn">
+                            <span class="icon">⭐</span>
+                            <span class="text">收藏 8901</span>
+                        </button>
+                        <button class="action-btn share-btn">
+                            <span class="icon">📤</span>
+                            <span class="text">分享 1234</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UP主信息 -->
+                <div class="uploader-info">
+                    <div class="uploader-avatar">
+                        <svg class="avatar-placeholder" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="30" fill="#E5E5E5"/>
+                            <circle cx="30" cy="22" r="8" fill="#999"/>
+                            <ellipse cx="30" cy="45" rx="12" ry="8" fill="#999"/>
+                        </svg>
+                    </div>
+                    <div class="uploader-details">
+                        <div class="uploader-name" id="uploaderName">程序员小明</div>
+                        <div class="uploader-stats">145万粉丝 · 1234个视频</div>
+                        <div class="video-description">
+                            <div class="description-content collapsed" id="descriptionContent">
+                                <p>这是一个关于React前端开发的详细教程，从基础概念到实际项目开发，带你全面掌握React技术栈。适合有一定JavaScript基础的开发者学习。</p>
+                                <p>🔥 课程大纲：</p>
+                                <p>00:00 React简介</p>
+                                <p>02:30 环境搭建</p>
+                                <p>05:15 组件基础</p>
+                                <p>08:40 状态管理</p>
+                                <p>11:20 项目实战</p>
+                                <p>📚 课程特色：</p>
+                                <p>• 从零基础到实战项目</p>
+                                <p>• 包含最新 React 18 特性</p>
+                                <p>• 提供完整源码和练习</p>
+                                <p>• 涵盖 Hooks、Context、Router 等核心概念</p>
+                                <p>• 实战项目：Todo 应用、博客系统、电商网站</p>
+                                <p>🎯 适合人群：</p>
+                                <p>• 有一定 JavaScript 基础的开发者</p>
+                                <p>• 想要学习 React 框架的前端新手</p>
+                                <p>• 需要系统化学习的在职开发者</p>
+                            </div>
+                            <button class="description-toggle" id="descriptionToggle">
+                                <span class="toggle-text">展开</span>
+                                <span class="toggle-icon">▼</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="uploader-actions">
+                        <button class="follow-btn">+ 关注</button>
+                    </div>
+                </div>
+
+                <!-- 评论区域 -->
+                <div class="comments-section">
+                    <div class="comments-header">
+                        <h3>评论 <span class="comment-count">2847</span></h3>
+                    </div>
+                    <div class="comment-input">
+                        <div class="comment-avatar">
+                            <svg class="avatar-placeholder" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
+                                <circle cx="20" cy="15" r="6" fill="#999"/>
+                                <ellipse cx="20" cy="30" rx="8" ry="6" fill="#999"/>
+                            </svg>
+                        </div>
+                        <input type="text" placeholder="发一条友善的评论" class="comment-text">
+                        <button class="comment-submit">发布</button>
+                    </div>
+                    
+                    <!-- 评论列表 -->
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <svg class="avatar-placeholder" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
+                                    <circle cx="20" cy="15" r="6" fill="#999"/>
+                                    <ellipse cx="20" cy="30" rx="8" ry="6" fill="#999"/>
+                                </svg>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-user">技术爱好者</div>
+                                <div class="comment-text">讲得真好！终于理解了React的核心概念，感谢UP主的详细讲解</div>
+                                <div class="comment-meta">
+                                    <span class="comment-time">2天前</span>
+                                    <button class="comment-like">👍 128</button>
+                                    <button class="comment-reply">回复</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <svg class="avatar-placeholder" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
+                                    <circle cx="20" cy="15" r="6" fill="#999"/>
+                                    <ellipse cx="20" cy="30" rx="8" ry="6" fill="#999"/>
+                                </svg>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-user">前端新手</div>
+                                <div class="comment-text">请问UP主，有没有配套的练习项目呢？想要实际操作一下</div>
+                                <div class="comment-meta">
+                                    <span class="comment-time">1天前</span>
+                                    <button class="comment-like">👍 45</button>
+                                    <button class="comment-reply">回复</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-item">
+                            <div class="comment-avatar">
+                                <svg class="avatar-placeholder" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
+                                    <circle cx="20" cy="15" r="6" fill="#999"/>
+                                    <ellipse cx="20" cy="30" rx="8" ry="6" fill="#999"/>
+                                </svg>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-user">资深开发者</div>
+                                <div class="comment-text">内容质量很高，讲解思路清晰，适合入门学习。期待更多进阶内容！</div>
+                                <div class="comment-meta">
+                                    <span class="comment-time">3小时前</span>
+                                    <button class="comment-like">👍 89</button>
+                                    <button class="comment-reply">回复</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧推荐区域 -->
+            <aside class="recommendation-section">
+                <h3 class="recommend-title">相关推荐</h3>
+                <div class="recommend-list">
+                    <div class="recommend-item">
+                        <div class="recommend-thumbnail">
+                            <svg class="video-placeholder" width="160" height="90" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="160" height="90" fill="#E5E5E5"/>
+                                <circle cx="80" cy="45" r="12" fill="#999" opacity="0.6"/>
+                                <polygon points="75,38 75,52 87,45" fill="white"/>
+                            </svg>
+                            <div class="recommend-duration">8:42</div>
+                        </div>
+                        <div class="recommend-info">
+                            <h4 class="recommend-title-text">Vue.js 3.0 新特性详解</h4>
+                            <div class="recommend-author">前端技术分享</div>
+                            <div class="recommend-stats">98.7万播放 · 3天前</div>
+                        </div>
+                    </div>
+
+                    <div class="recommend-item">
+                        <div class="recommend-thumbnail">
+                            <svg class="video-placeholder" width="160" height="90" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="160" height="90" fill="#E5E5E5"/>
+                                <circle cx="80" cy="45" r="12" fill="#999" opacity="0.6"/>
+                                <polygon points="75,38 75,52 87,45" fill="white"/>
+                            </svg>
+                            <div class="recommend-duration">12:15</div>
+                        </div>
+                        <div class="recommend-info">
+                            <h4 class="recommend-title-text">JavaScript ES6+ 核心特性</h4>
+                            <div class="recommend-author">编程教学</div>
+                            <div class="recommend-stats">76.3万播放 · 1周前</div>
+                        </div>
+                    </div>
+
+                    <div class="recommend-item">
+                        <div class="recommend-thumbnail">
+                            <svg class="video-placeholder" width="160" height="90" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="160" height="90" fill="#E5E5E5"/>
+                                <circle cx="80" cy="45" r="12" fill="#999" opacity="0.6"/>
+                                <polygon points="75,38 75,52 87,45" fill="white"/>
+                            </svg>
+                            <div class="recommend-duration">15:33</div>
+                        </div>
+                        <div class="recommend-info">
+                            <h4 class="recommend-title-text">Node.js 后端开发实战</h4>
+                            <div class="recommend-author">全栈开发者</div>
+                            <div class="recommend-stats">54.2万播放 · 5天前</div>
+                        </div>
+                    </div>
+
+                    <div class="recommend-item">
+                        <div class="recommend-thumbnail">
+                            <svg class="video-placeholder" width="160" height="90" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="160" height="90" fill="#E5E5E5"/>
+                                <circle cx="80" cy="45" r="12" fill="#999" opacity="0.6"/>
+                                <polygon points="75,38 75,52 87,45" fill="white"/>
+                            </svg>
+                            <div class="recommend-duration">9:28</div>
+                        </div>
+                        <div class="recommend-info">
+                            <h4 class="recommend-title-text">CSS Grid 布局完全指南</h4>
+                            <div class="recommend-author">UI设计师</div>
+                            <div class="recommend-stats">43.8万播放 · 2天前</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

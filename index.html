@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-left">
+                <svg class="logo" width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="80" height="40" rx="4" fill="#00AEEC"/>
+                    <text x="40" y="25" text-anchor="middle" fill="white" font-size="12" font-family="Arial">bilibili</text>
+                </svg>
+            </div>
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" placeholder="搜索你感兴趣的内容..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <button class="login-btn">登录</button>
+                <button class="register-btn">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 分类导航 -->
+        <nav class="category-nav">
+            <div class="category-item active">首页</div>
+            <div class="category-item">动画</div>
+            <div class="category-item">番剧</div>
+            <div class="category-item">国创</div>
+            <div class="category-item">音乐</div>
+            <div class="category-item">舞蹈</div>
+            <div class="category-item">游戏</div>
+            <div class="category-item">知识</div>
+            <div class="category-item">科技</div>
+            <div class="category-item">运动</div>
+            <div class="category-item">汽车</div>
+            <div class="category-item">生活</div>
+        </nav>
+
+        <!-- 视频列表 -->
+        <div class="video-grid">
+            <!-- 视频卡片模板 -->
+            <div class="video-card" data-id="1">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">12:34</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【技术分享】前端开发实战教程 - React从入门到精通</h3>
+                    <div class="video-meta">
+                        <div class="author">程序员小明</div>
+                        <div class="stats">
+                            <span class="play-count">12.5万播放</span>
+                            <span class="bullet-count">2.3万弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-id="2">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">8:15</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【音乐MV】超燃BGM混剪，听完热血沸腾！</h3>
+                    <div class="video-meta">
+                        <div class="author">音乐达人</div>
+                        <div class="stats">
+                            <span class="play-count">86.2万播放</span>
+                            <span class="bullet-count">5.7万弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-id="3">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">15:42</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【游戏实况】原神新角色深度测评，值得抽取吗？</h3>
+                    <div class="video-meta">
+                        <div class="author">游戏解说员</div>
+                        <div class="stats">
+                            <span class="play-count">45.8万播放</span>
+                            <span class="bullet-count">1.2万弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-id="4">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">6:28</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【美食制作】手把手教你做网红奶茶，在家也能开奶茶店</h3>
+                    <div class="video-meta">
+                        <div class="author">美食家小厨</div>
+                        <div class="stats">
+                            <span class="play-count">32.1万播放</span>
+                            <span class="bullet-count">8.9千弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-id="5">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">20:15</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【科普知识】宇宙中最神秘的黑洞，带你了解时空的奥秘</h3>
+                    <div class="video-meta">
+          1              <div class="author">科学探索者</div>
+                        <div class="stats">
+                            <span class="play-count">78.3万播放</span>
+                            <span class="bullet-count">3.4万弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-id="6">
+                <div class="video-thumbnail">
+                    <svg class="video-placeholder" width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="320" height="200" fill="#E5E5E5"/>
+                        <circle cx="160" cy="100" r="20" fill="#999" opacity="0.6"/>
+                        <polygon points="150,85 150,115 175,100" fill="white"/>
+                    </svg>
+                    <div class="video-duration">11:33</div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">【舞蹈cover】最新热门舞蹈教学，简单易学超好看</h3>
+                    <div class="video-meta">
+                        <div class="author">舞蹈小仙女</div>
+                        <div class="stats">
+                            <span class="play-count">156.7万播放</span>
+                            <span class="bullet-count">6.8万弹幕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
