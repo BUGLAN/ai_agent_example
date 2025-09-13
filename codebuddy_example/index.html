@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 整体布局容器 -->
+    <div class="nav-container">
+        <!-- 左侧导航侧边栏 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">B</div>
+                <span>哔哩哔哩</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">首页</a>
+                <a href="#" class="nav-item">番剧</a>
+                <a href="#" class="nav-item">直播</a>
+                <a href="#" class="nav-item">游戏</a>
+                <a href="#" class="nav-item">会员购</a>
+                <a href="#" class="nav-item">漫画</a>
+                <a href="#" class="nav-item">赛事</a>
+            </nav>
+        </aside>
+        
+        <!-- 右侧内容区域 -->
+        <div class="main-content-area">
+            <div class="search-user-container">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索视频、番剧、UP主...">
+                    <button class="search-btn">搜索</button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="upload-btn">投稿</a>
+                    <a href="#" class="login-btn">登录</a>
+                </div>
+            </div>
+
+            <!-- 轮播图区域 -->
+            <div class="banner-container">
+                <div class="banner-slider">
+                    <div class="banner-slide active">
+                        <div class="banner-placeholder">推荐视频1</div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-placeholder">推荐视频2</div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-placeholder">推荐视频3</div>
+                    </div>
+                </div>
+                <div class="banner-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- 主要内容区域 -->
+            <main class="main-content">
+                <!-- 推荐视频区域 -->
+                <section class="recommend-section">
+                    <div class="section-header">
+                        <h2>推荐视频</h2>
+                        <a href="#" class="more-link">查看更多 ></a>
+                    </div>
+                    <div class="video-grid">
+                        <!-- 视频卡片1 -->
+                        <div class="video-card" onclick="window.location.href='video.html?id=1'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面1</div>
+                                <div class="video-info">
+                                    <span class="duration">10:24</span>
+                                    <span class="play-count">▶ 12.3万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【4K】震撼人心的自然风光纪录片</h3>
+                                <div class="up-info">
+                                    <span class="up-name">旅行摄影师</span>
+                                    <span class="views">12.3万播放 · 2.3万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 视频卡片2 -->
+                        <div class="video-card" onclick="window.location.href='video.html?id=2'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面2</div>
+                                <div class="video-info">
+                                    <span class="duration">15:36</span>
+                                    <span class="play-count">▶ 8.7万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【游戏实况】最新3A大作全流程通关</h3>
+                                <div class="up-info">
+                                    <span class="up-name">游戏达人</span>
+                                    <span class="views">8.7万播放 · 1.5万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 更多视频卡片... -->
+                        <div class="video-card" onclick="window.location.href='video.html?id=3'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面3</div>
+                                <div class="video-info">
+                                    <span class="duration">08:12</span>
+                                    <span class="play-count">▶ 23.1万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【美食】在家也能做的米其林三星料理</h3>
+                                <div class="up-info">
+                                    <span class="up-name">美食家小厨</span>
+                                    <span class="views">23.1万播放 · 3.8万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-card" onclick="window.location.href='video.html?id=4'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面4</div>
+                                <div class="video-info">
+                                    <span class="duration">22:45</span>
+                                    <span class="play-count">▶ 15.6万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【科技】2024年最值得期待的电子产品</h3>
+                                <div class="up-info">
+                                    <span class="up-name">科技前沿</span>
+                                    <span class="views">15.6万播放 · 2.9万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-card" onclick="window.location.href='video.html?id=5'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面5</div>
+                                <div class="video-info">
+                                    <span class="duration">05:18</span>
+                                    <span class="play-count">▶ 45.2万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【搞笑】猫咪的迷惑行为大合集</h3>
+                                <div class="up-info">
+                                    <span class="up-name">萌宠日记</span>
+                                    <span class="views">45.2万播放 · 6.7万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-card" onclick="window.location.href='video.html?id=6'">
+                            <div class="video-thumb">
+                                <div class="video-placeholder">视频封面6</div>
+                                <div class="video-info">
+                                    <span class="duration">18:33</span>
+                                    <span class="play-count">▶ 9.8万</span>
+                                </div>
+                            </div>
+                            <div class="video-details">
+                                <h3 class="video-title">【音乐】经典老歌重新编曲翻唱</h3>
+                                <div class="up-info">
+                                    <span class="up-name">音乐制作人</span>
+                                    <span class="views">9.8万播放 · 1.2万弹幕</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【视频标题】- 哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="video-styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14'>📺</text></svg>">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-content">
+            <!-- 左侧 logo -->
+            <div class="header-left">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 177 36" width="110" height="25">
+                        <path d="M12.3 4.2c.9-.9 2.4-.9 3.3 0l2.4 2.4c.9.9.9 2.4 0 3.3L16.2 12c-.4.4-.4 1.1 0 1.5l1.8 1.8c.9.9.9 2.4 0 3.3l-2.4 2.4c-.9.9-2.4.9-3.3 0L10.5 19.2c-.4-.4-1.1-.4-1.5 0L7.2 21c-.9.9-2.4.9-3.3 0L1.5 18.6c-.9-.9-.9-2.4 0-3.3l1.8-1.8c.4-.4.4-1.1 0-1.5L1.5 10.2c-.9-.9-.9-2.4 0-3.3l2.4-2.4c.9-.9 2.4-.9 3.3 0l1.8 1.8c.4.4 1.1.4 1.5 0L12.3 4.2z" fill="#00AEEC"/>
+                        <text x="30" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00AEEC">bilibili</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 中间搜索框 -->
+            <div class="header-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="搜索你想要的内容...">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 右侧用户区域 -->
+            <div class="header-right">
+                <div class="nav-item">投稿</div>
+                <div class="nav-item">消息</div>
+                <div class="nav-item">动态</div>
+                <div class="nav-item">收藏</div>
+                <div class="nav-item">历史</div>
+                <div class="user-avatar">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%23FB7299'/><text x='16' y='20' text-anchor='middle' fill='white' font-size='14'>👤</text></svg>" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="video-main">
+        <!-- 左侧视频播放区域 -->
+        <div class="video-left">
+            <!-- 视频播放器 -->
+            <div class="video-player-container">
+                <div class="video-player">
+                    <div class="video-screen">
+                        <div class="video-placeholder">
+                            <div class="play-icon-large">
+                                <svg width="80" height="80" viewBox="0 0 80 80">
+                                    <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.8)"/>
+                                    <polygon points="30,25 30,55 55,40" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="video-info-overlay">
+                                <p>点击播放视频</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 视频控制栏 -->
+                    <div class="video-controls">
+                        <div class="controls-left">
+                            <button class="control-btn play-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <polygon points="8,5 8,19 19,12" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <span class="time-display">00:00 / 12:34</span>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-played" style="width: 0%"></div>
+                                <div class="progress-thumb"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="controls-right">
+                            <button class="control-btn volume-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <button class="control-btn settings-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <button class="control-btn fullscreen-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视频信息 -->
+            <div class="video-info-section">
+                <h1 class="video-title">【超级有趣】这是一个非常精彩的视频标题，内容丰富多彩</h1>
+                
+                <div class="video-meta">
+                    <div class="video-stats">
+                        <span class="stat-item">📺 12.5万观看</span>
+                        <span class="stat-item">📅 2024-01-15 12:30:00</span>
+                    </div>
+                    
+                    <div class="video-actions">
+                        <button class="action-btn like-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" fill="currentColor"/>
+                            </svg>
+                            <span>3.2千</span>
+                        </button>
+                        
+                        <button class="action-btn dislike-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" fill="currentColor"/>
+                            </svg>
+                            <span>踩</span>
+                        </button>
+                        
+                        <button class="action-btn coin-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <text x="12" y="16" text-anchor="middle" font-size="12" fill="currentColor">币</text>
+                            </svg>
+                            <span>投币</span>
+                        </button>
+                        
+                        <button class="action-btn collect-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" fill="currentColor"/>
+                            </svg>
+                            <span>收藏</span>
+                        </button>
+                        
+                        <button class="action-btn share-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" fill="currentColor"/>
+                            </svg>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UP主信息 -->
+            <div class="uploader-section">
+                <div class="uploader-info">
+                    <div class="uploader-avatar-large">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><circle cx='24' cy='24' r='24' fill='%23FB7299'/><text x='24' y='28' text-anchor='middle' fill='white' font-size='16'>UP</text></svg>" alt="UP主头像">
+                    </div>
+                    <div class="uploader-details">
+                        <h3 class="uploader-name">有趣的UP主</h3>
+                        <p class="uploader-followers">粉丝数 52.3万</p>
+                        <p class="uploader-desc">这是一个专注于创作优质内容的UP主，致力于为大家带来有趣、有用的视频。</p>
+                    </div>
+                    <button class="follow-btn">+ 关注</button>
+                </div>
+            </div>
+
+            <!-- 视频简介 -->
+            <div class="video-description">
+                <div class="desc-header">
+                    <h3>视频简介</h3>
+                    <button class="expand-btn">展开</button>
+                </div>
+                <div class="desc-content">
+                    <p>这是一个非常精彩的视频内容介绍。在这个视频中，我们将为大家展示一些非常有趣的内容，包括但不限于：</p>
+                    <ul>
+                        <li>精彩的内容展示</li>
+                        <li>实用的技巧分享</li>
+                        <li>有趣的互动环节</li>
+                    </ul>
+                    <p>希望大家能够喜欢这个视频，如果觉得不错的话，请记得点赞、投币、收藏和关注哦！</p>
+                    
+                    <div class="video-tags">
+                        <span class="tag">#有趣</span>
+                        <span class="tag">#教程</span>
+                        <span class="tag">#分享</span>
+                        <span class="tag">#生活</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <div class="comments-header">
+                    <h3>评论 <span class="comment-count">1,234</span></h3>
+                    <div class="comment-sort">
+                        <button class="sort-btn active">按热度排序</button>
+                        <button class="sort-btn">按时间排序</button>
+                    </div>
+                </div>
+
+                <!-- 发表评论 -->
+                <div class="comment-input-section">
+                    <div class="comment-avatar">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><circle cx='18' cy='18' r='18' fill='%2300AEEC'/><text x='18' y='22' text-anchor='middle' fill='white' font-size='12'>我</text></svg>" alt="我的头像">
+                    </div>
+                    <div class="comment-input-container">
+                        <textarea class="comment-input" placeholder="发一条友善的评论"></textarea>
+                        <div class="comment-actions">
+                            <div class="comment-tools">
+                                <button class="emoji-btn">😊</button>
+                                <button class="image-btn">📷</button>
+                            </div>
+                            <button class="submit-comment-btn">发布</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评论列表 -->
+                <div class="comments-list">
+                    <!-- 评论项 -->
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><circle cx='18' cy='18' r='18' fill='%23FF6B6B'/><text x='18' y='22' text-anchor='middle' fill='white' font-size='12'>A</text></svg>" alt="用户头像">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <span class="username">热心网友A</span>
+                                <span class="comment-time">2小时前</span>
+                            </div>
+                            <p class="comment-text">这个视频真的太有趣了！学到了很多新知识，UP主讲解得非常清楚。</p>
+                            <div class="comment-actions-bar">
+                                <button class="comment-like">
+                                    <svg width="16" height="16" viewBox="0 0 24 24">
+                                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" fill="currentColor"/>
+                                    </svg>
+                                    <span>236</span>
+                                </button>
+                                <button class="comment-reply">回复</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><circle cx='18' cy='18' r='18' fill='%234ECDC4'/><text x='18' y='22' text-anchor='middle' fill='white' font-size='12'>B</text></svg>" alt="用户头像">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <span class="username">学习达人B</span>
+                                <span class="comment-time">5小时前</span>
+                            </div>
+                            <p class="comment-text">感谢UP主的分享！这些技巧真的很实用，已经收藏了。</p>
+                            <div class="comment-actions-bar">
+                                <button class="comment-like">
+                                    <svg width="16" height="16" viewBox="0 0 24 24">
+                                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" fill="currentColor"/>
+                                    </svg>
+                                    <span>89</span>
+                                </button>
+                                <button class="comment-reply">回复</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><circle cx='18' cy='18' r='18' fill='%23AB47BC'/><text x='18' y='22' text-anchor='middle' fill='white' font-size='12'>C</text></svg>" alt="用户头像">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <span class="username">创意无限C</span>
+                                <span class="comment-time">1天前</span>
+                            </div>
+                            <p class="comment-text">UP主的创意真的很棒！期待下一期的内容更新。</p>
+                            <div class="comment-actions-bar">
+                                <button class="comment-like">
+                                    <svg width="16" height="16" viewBox="0 0 24 24">
+                                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" fill="currentColor"/>
+                                    </svg>
+                                    <span>156</span>
+                                </button>
+                                <button class="comment-reply">回复</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-comments">
+                    <button class="load-more-btn">查看更多评论</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧推荐区域 -->
+        <div class="video-right">
+            <div class="related-videos">
+                <h3 class="section-title">相关推荐</h3>
+                
+                <div class="related-video-list">
+                    <!-- 推荐视频项 -->
+                    <div class="related-video-item">
+                        <div class="related-video-cover">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='90' viewBox='0 0 160 90'><rect width='100%' height='100%' fill='%23e8f4fd'/><circle cx='80' cy='45' r='18' fill='%2300AEEC' opacity='0.9'/><polygon points='72,35 72,55 92,45' fill='white'/></svg>" alt="相关视频">
+                            <div class="related-duration">8:32</div>
+                        </div>
+                        <div class="related-video-info">
+                            <h4 class="related-title">相关视频标题：更多有趣的内容推荐</h4>
+                            <p class="related-uploader">推荐UP主</p>
+                            <p class="related-stats">5.2万观看 · 2天前</p>
+                        </div>
+                    </div>
+
+                    <div class="related-video-item">
+                        <div class="related-video-cover">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='90' viewBox='0 0 160 90'><rect width='100%' height='100%' fill='%23fff0f5'/><circle cx='80' cy='45' r='18' fill='%23FB7299' opacity='0.9'/><polygon points='72,35 72,55 92,45' fill='white'/></svg>" alt="相关视频">
+                            <div class="related-duration">12:15</div>
+                        </div>
+                        <div class="related-video-info">
+                            <h4 class="related-title">热门推荐：你不能错过的精彩内容</h4>
+                            <p class="related-uploader">热门创作者</p>
+                            <p class="related-stats">18.6万观看 · 1天前</p>
+                        </div>
+                    </div>
+
+                    <div class="related-video-item">
+                        <div class="related-video-cover">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='90' viewBox='0 0 160 90'><rect width='100%' height='100%' fill='%23f0fff0'/><circle cx='80' cy='45' r='18' fill='%234ECDC4' opacity='0.9'/><polygon points='72,35 72,55 92,45' fill='white'/></svg>" alt="相关视频">
+                            <div class="related-duration">6:48</div>
+                        </div>
+                        <div class="related-video-info">
+                            <h4 class="related-title">实用技巧分享：让生活更美好的小窍门</h4>
+                            <p class="related-uploader">生活达人</p>
+                            <p class="related-stats">9.8万观看 · 3天前</p>
+                        </div>
+                    </div>
+
+                    <div class="related-video-item">
+                        <div class="related-video-cover">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='90' viewBox='0 0 160 90'><rect width='100%' height='100%' fill='%23ffe4e1'/><circle cx='80' cy='45' r='18' fill='%23FF6B6B' opacity='0.9'/><polygon points='72,35 72,55 92,45' fill='white'/></svg>" alt="相关视频">
+                            <div class="related-duration">15:20</div>
+                        </div>
+                        <div class="related-video-info">
+                            <h4 class="related-title">深度解析：这个话题为什么这么火</h4>
+                            <p class="related-uploader">分析专家</p>
+                            <p class="related-stats">32.1万观看 · 4小时前</p>
+                        </div>
+                    </div>
+
+                    <div class="related-video-item">
+                        <div class="related-video-cover">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='90' viewBox='0 0 160 90'><rect width='100%' height='100%' fill='%23e1f5fe'/><circle cx='80' cy='45' r='18' fill='%2329B6F6' opacity='0.9'/><polygon points='72,35 72,55 92,45' fill='white'/></svg>" alt="相关视频">
+                            <div class="related-duration">9:33</div>
+                        </div>
+                        <div class="related-video-info">
+                            <h4 class="related-title">科技前沿：最新技术发展趋势</h4>
+                            <p class="related-uploader">科技博主</p>
+                            <p class="related-stats">24.7万观看 · 1天前</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="video-script.js"></script>
+</body>
+</html>
+

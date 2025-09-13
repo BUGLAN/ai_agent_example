@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能文本分析Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .input-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .input-section textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+        
+        .input-section textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result-section {
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .result-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .result-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .result-item strong {
+            color: #333;
+            display: inline-block;
+            width: 80px;
+        }
+        
+        .suggestions {
+            margin-top: 15px;
+        }
+        
+        .suggestion-item {
+            background: #e8f2ff;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+            display: none;
+        }
+        
+        .stats {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .error {
+            background: #ffe6e6;
+            color: #d63384;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 智能文本分析Agent</h1>
+            <p>分析文本类别：名词、成语、歇后语、常规句子，并提供智能补全建议</p>
+        </div>
+        
+        <div class="content">
+            <div class="input-section">
+                <label for="textInput">请输入要分析的文本：</label>
+                <textarea id="textInput" placeholder="例如：一心一意、泥菩萨过河、电脑、今天天气真好..."></textarea>
+                <br><br>
+                <button class="btn" onclick="analyzeText()">分析文本</button>
+                <button class="btn" onclick="clearText()" style="margin-left: 10px; background: #6c757d;">清空</button>
+                <button class="btn" onclick="showStats()" style="margin-left: 10px; background: #28a745;">查看统计</button>
+            </div>
+            
+            <div class="loading" id="loading">
+                正在分析中...
+            </div>
+            
+            <div class="stats" id="stats" style="display: none;">
+                <h4>使用统计</h4>
+                <div id="statsContent"></div>
+            </div>
+            
+            <div class="result-section" id="resultSection">
+                <div class="result-card">
+                    <h3>📊 分析结果</h3>
+                    <div class="result-item">
+                        <strong>原文：</strong><span id="originalText"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>类别：</strong><span id="category"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>置信度：</strong><span id="confidence"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>解释：</strong><span id="explanation"></span>
+                    </div>
+                    
+                    <div class="suggestions">
+                        <strong>💡 智能补全建议：</strong>
+                        <div id="suggestionsList"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error" id="error" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        async function analyzeText() {
+            const text = document.getElementById('textInput').value.trim();
+            if (!text) {
+                showError('请输入要分析的文本');
+                return;
+            }
+
+            showLoading(true);
+            hideError();
+            
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+                
+                const data = await response.json();
+                showLoading(false);
+                
+                if (data.status === 'success') {
+                    displayResult(data.data);
+                } else {
+                    showError(data.message);
+                }
+            } catch (error) {
+                showLoading(false);
+                showError('网络错误，请稍后重试');
+            }
+        }
+        
+        async function showStats() {
+            try {
+                const response = await fetch('/stats');
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    const stats = data.data;
+                    let content = `<p>总分析次数: ${stats.total_analyses}</p>`;
+                    
+                    if (stats.total_analyses > 0) {
+                        content += '<p>类别分布:</p><ul>';
+                        for (const [category, count] of Object.entries(stats.categories)) {
+                            content += `<li>${category}: ${count}次</li>`;
+                        }
+                        content += '</ul>';
+                    } else {
+                        content += '<p>暂无分析记录</p>';
+                    }
+                    
+                    document.getElementById('statsContent').innerHTML = content;
+                    document.getElementById('stats').style.display = 'block';
+                    document.getElementById('resultSection').style.display = 'none';
+                }
+            } catch (error) {
+                showError('获取统计信息失败');
+            }
+        }
+        
+        function displayResult(data) {
+            document.getElementById('originalText').textContent = data.original_text;
+            document.getElementById('category').textContent = data.category;
+            document.getElementById('confidence').textContent = (data.confidence * 100).toFixed(1) + '%';
+            document.getElementById('explanation').textContent = data.explanation;
+            
+            const suggestionsList = document.getElementById('suggestionsList');
+            suggestionsList.innerHTML = '';
+            
+            data.suggestions.forEach(suggestion => {
+                const div = document.createElement('div');
+                div.className = 'suggestion-item';
+                div.textContent = suggestion;
+                suggestionsList.appendChild(div);
+            });
+            
+            document.getElementById('resultSection').style.display = 'block';
+            document.getElementById('stats').style.display = 'none';
+        }
+        
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+        
+        function hideError() {
+            document.getElementById('error').style.display = 'none';
+        }
+        
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('stats').style.display = 'none';
+            document.getElementById('textInput').focus();
+        }
+        
+        // 支持回车键提交
+        document.getElementById('textInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                analyzeText();
+            }
+        });
+    </script>
+</body>
+</html>

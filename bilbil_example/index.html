@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.bilibili.com/favicon.ico" alt="bilibili">
+                <span>哔哩哔哩</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">首页</a>
+                <a href="#" class="nav-item">动态</a>
+                <a href="#" class="nav-item">热门</a>
+                <a href="#" class="nav-item">频道</a>
+                <a href="#" class="nav-item">直播</a>
+                <a href="#" class="nav-item">会员购</a>
+            </nav>
+            
+            <div class="search-box">
+                <input type="text" placeholder="搜索视频、番剧、up主或av号">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="user-actions">
+                <button class="upload-btn">投稿</button>
+                <div class="user-avatar">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f0f0f0'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='%23999' font-family='Arial' font-size='10'%3EU%3C/text%3E%3C/svg%3E" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-container">
+        <!-- 轮播图区域 -->
+        <section class="carousel-section">
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400'%3E%3Crect width='1200' height='400' fill='%23e0e0e0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23666' font-family='Arial' font-size='20'%3E热门推荐%3C/text%3E%3C/svg%3E" alt="推荐1">
+                    <div class="carousel-caption">
+                        <h3>热门番剧推荐</h3>
+                        <p>最新一季精彩来袭</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </section>
+
+        <!-- 推荐视频区域 -->
+        <section class="video-section">
+            <div class="section-header">
+                <h2>推荐视频</h2>
+                <a href="#" class="more-link">查看更多 ></a>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3E%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">10:32</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【新番速递】2024年最值得期待的10部动画作品</h3>
+                            <div class="video-meta">
+                                <span class="up-name">动漫解说小助手</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 128.5万
+                                    <i class="fas fa-comment"></i> 8.9万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3E%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">15:21</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【游戏实况】原神4.3版本全新剧情体验</h3>
+                            <div class="video-meta">
+                                <span class="up-name">游戏达人小明</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 89.2万
+                                    <i class="fas fa-comment"></i> 5.6万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">08:45</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【Vlog】程序员的日常：一天都在做什么？</h3>
+                            <div class="video-meta">
+                                <span class="up-name">技术分享UP主</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 45.8万
+                                    <i class="fas fa-comment"></i> 3.2万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">12:18</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【美食制作】15分钟搞定完美早餐，简单又营养</h3>
+                            <div class="video-meta">
+                                <span class="up-name">美食博主小李</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 67.3万
+                                    <i class="fas fa-comment"></i> 4.1万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">20:05</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【科普】人工智能发展史：从图灵测试到ChatGPT</h3>
+                            <div class="video-meta">
+                                <span class="up-name">知识科普君</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 156.7万
+                                    <i class="fas fa-comment"></i> 12.3万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <a href="video.html" class="video-link">
+                        <div class="video-cover">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='14'%3E视频封面%3C/text%3E%3C/svg%3E" alt="视频封面">
+                            <div class="video-duration">25:30</div>
+                            <div class="video-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">【音乐翻唱】热门歌曲合集，治愈系女声翻唱</h3>
+                            <div class="video-meta">
+                                <span class="up-name">音乐小天使</span>
+                                <span class="video-stats">
+                                    <i class="fas fa-play"></i> 234.5万
+                                    <i class="fas fa-comment"></i> 18.9万
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 直播区域 -->
+        <section class="live-section">
+            <div class="section-header">
+                <h2>热门直播</h2>
+                <a href="#" class="more-link">查看更多 ></a>
+            </div>
+            
+            <div class="live-grid">
+                <div class="live-card">
+                    <div class="live-cover">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='135'%3E%3Crect width='240' height='135' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='12'%3E直播封面%3C/text%3E%3C/svg%3E" alt="直播封面">
+                        <div class="live-status">
+                            <span class="live-badge">直播中</span>
+                            <span class="viewer-count">12.8万</span>
+                        </div>
+                    </div>
+                    <div class="live-info">
+                        <h4>【王者荣耀】巅峰赛冲分，国服第一李白</h4>
+                        <span class="streamer-name">游戏主播小王</span>
+                    </div>
+                </div>
+
+                <div class="live-card">
+                    <div class="live-cover">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='135'%3E%3Crect width='240' height='135' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='12'%3E直播封面%3C/text%3E%3C/svg%3E" alt="直播封面">
+                        <div class="live-status">
+                            <span class="live-badge">直播中</span>
+                            <span class="viewer-count">8.5万</span>
+                        </div>
+                    </div>
+                    <div class="live-info">
+                        <h4>【绘画】板绘教程，从零开始学画画</h4>
+                        <span class="streamer-name">画师小美</span>
+                    </div>
+                </div>
+
+                <div class="live-card">
+                    <div class="live-cover">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='135'%3E%3Crect width='240' height='135' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='12'%3E直播封面%3C/text%3E%3C/svg%3E" alt="直播封面">
+                        <div class="live-status">
+                            <span class="live-badge">直播中</span>
+                            <span class="viewer-count">15.2万</span>
+                        </div>
+                    </div>
+                    <div class="live-info">
+                        <h4>【聊天】深夜电台，情感咨询时间</h4>
+                        <span class="streamer-name">知心姐姐</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 简单的回到顶部功能
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 滚动显示/隐藏回到顶部按钮
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
