@@ -213,11 +213,11 @@ class NovelSpider:
         
         return False
     
-    def crawl_pages(self, max_pages=10):
+    def crawl_pages(self, start_page=1, max_pages=10):
         """爬取指定页数的小说"""
         all_novels = []
         
-        for page in range(1, max_pages + 1):
+        for page in range(start_page, max_pages + 2):
             print(f"\n正在爬取第 {page} 页...")
             
             if page == 1:
@@ -266,7 +266,7 @@ class NovelSpider:
 
 def main():
     spider = NovelSpider()
-    spider.crawl_pages(1)  # 爬取前10页
+    spider.crawl_pages(1, 10)  # 爬取前10页
 
 if __name__ == "__main__":
     main()
